@@ -1,0 +1,164 @@
+---
+
+
+---
+
+<h2 id="task-1--matlab-ml-onramp-course">TASK 1 : MATLAB ML Onramp Course</h2>
+<p>Successfully learned the <strong>end-to-end flow of a machine learning project</strong> in MATLAB. This included:</p>
+<ul>
+<li>
+<p><strong>Data Handling:</strong> Importing data and extracting features for model readiness.</p>
+</li>
+<li>
+<p><strong>Model Training &amp; Validation:</strong> Partitioning data and training supervised learning models.</p>
+</li>
+<li>
+<p><strong>Performance Assessment:</strong> Evaluating model performance and implementing techniques to improve it.</p>
+</li>
+<li>
+<p>Gained exposure to <strong>supervised learning</strong> in MATLAB, allowing for comparison with Python-based tools like <strong>scikit-learn</strong>.<br>
+<img src="https://github.com/riti2043/Level1images/blob/main/MATLAB.jpeg?raw=true" alt=""></p>
+</li>
+</ul>
+<h2 id="task-2--kaggle-crafter---build--publish-your-own-dataset">TASK 2 : Kaggle Crafter - Build &amp; Publish Your Own Dataset</h2>
+<h3 id="what-is-kaggle"><strong>What is Kaggle?</strong></h3>
+<p>Kaggle is an online platform for data science and machine learning that allows users to explore datasets, participate in competitions, publish notebooks, and collaborate with a global data science community. It also serves as a repository where well-documented datasets can be shared and reused for learning, research, and experimentation.</p>
+<h3 id="task-overview"><strong>Task Overview</strong></h3>
+<p>In this task, I created and published a <strong>synthetic financial dataset</strong> using the Python <em>Faker</em> library. Since the data is fully synthetic, it does not contain any real personal information and is safe for public sharing. The dataset was uploaded in CSV format with proper metadata, including a title, tags, description, and cover image.<br>
+The dataset includes the following columns:</p>
+<ul>
+<li>
+<p><strong>Name</strong> – Synthetic full name of an individual</p>
+</li>
+<li>
+<p><strong>Credit card number</strong> – Randomly generated credit card number</p>
+</li>
+<li>
+<p><strong>Credit card provider</strong> – Issuing credit card company</p>
+</li>
+<li>
+<p><strong>Currency</strong> – Currency code and currency name</p>
+</li>
+<li>
+<p><strong>Phone Number</strong> – Generated contact number</p>
+</li>
+<li>
+<p><strong>Email</strong> – Synthetic email address</p>
+</li>
+</ul>
+<p><img src="https://github.com/riti2043/Level1images/blob/main/TASK2.jpeg?raw=true" alt=""></p>
+<h2 id="task-3--data-detox---data-cleaning-using-pandas">TASK 3 : Data Detox - Data Cleaning using Pandas</h2>
+<p>Data cleaning is a crucial preprocessing step that ensures datasets are accurate, consistent, and suitable for analysis or machine learning. Proper handling of missing values, inconsistencies, and duplicates improves data quality and model reliability.</p>
+<p>The given dataset contained customer details and activity-related information.<br>
+The steps I followed:</p>
+<ul>
+<li>
+<p>Loaded the dataset and explored its structure, data types, and overall size.</p>
+</li>
+<li>
+<p>Identified missing values in both categorical and numerical columns and removed records with missing <em>CustomerID</em> values.</p>
+</li>
+<li>
+<p>Handled missing categorical values by filling <em>Gender</em> with <em>NotDisclosed</em> and <em>Country</em> and <em>PreferredDevice</em> with <em>Unknown</em>. Handled missing numerical values by filling <em>Age</em> with median age and <em>TotalPurchase</em> with zero.</p>
+</li>
+<li>
+<p>Converted <em>SignupDate</em> and <em>LastLogin</em> columns to datetime format and resolved missing values through logical cross-filling. Converted numerical columns to the correct data types for proper analysis.</p>
+</li>
+<li>
+<p>Removed numeric characters from the <em>Name</em>  column to correct invalid name entries. Replaced negative values in <em>Age</em> with the median age and corrected negative <em>TotalPurchase</em> values by setting them to zero.</p>
+</li>
+<li>
+<p>Standardized categorical columns by fixing common spelling errors and removed duplicate records before saving the cleaned dataset as a new CSV file.</p>
+</li>
+</ul>
+<h2 id="task-4--anomaly-detection">TASK 4 : Anomaly Detection</h2>
+<p><strong>Anomaly detection</strong> is the process of identifying data points or patterns that significantly deviate from normal behavior. It is commonly used to uncover rare, unusual, or suspicious activities hidden within large datasets.</p>
+<h3 id="real-world-applications">Real-World Applications</h3>
+<ul>
+<li>
+<p>Cybersecurity: Detecting unauthorized access, insider threats, and data breaches</p>
+</li>
+<li>
+<p>Finance: Identifying fraudulent transactions and abnormal spending behavior</p>
+</li>
+<li>
+<p>Healthcare: Spotting irregular patient vitals or abnormal medical test results</p>
+</li>
+</ul>
+<hr>
+<h3 id="dataset-used">Dataset Used</h3>
+<p>The dataset contains user activity logs from an internal system, including login behavior, data usage, file downloads, timestamps, and remote access indicators.</p>
+<hr>
+<h3 id="process-followed">Process Followed</h3>
+<ul>
+<li>
+<p>Loaded and explored the dataset to understand structure, ranges, and user behavior</p>
+</li>
+<li>
+<p>Analyzed feature distributions and correlations to identify normal activity trends</p>
+</li>
+<li>
+<p>Visualized data access and file download patterns using histograms and scatter plots</p>
+</li>
+<li>
+<p>Applied statistical methods (Z-score and IQR) to detect extreme deviations</p>
+</li>
+<li>
+<p>Applied unsupervised machine learning (Isolation Forest) after feature scaling</p>
+</li>
+<li>
+<p>Compared anomalies detected by different methods to reduce false positives</p>
+</li>
+<li>
+<p>Identified top suspicious user sessions using multi-feature and multi-model evidence</p>
+</li>
+</ul>
+<h2 id="task-5--logistic-regression-from-scratch">TASK 5 : Logistic Regression from Scratch</h2>
+<p>Logistic Regression is a supervised machine learning algorithm used for <strong>binary classification</strong> problems. It models the probability of a data point belonging to a particular class using the <strong>sigmoid function</strong>, which maps values between 0 and 1. Based on a decision threshold, the model assigns class labels such as 0 or 1.</p>
+<p>Logistic Regression is used for <strong>binary classification</strong> when both <strong>probability estimation</strong> and <strong>model interpretability</strong> are important and performs well when the relationship between features and the target is approximately linear.</p>
+<p>Logistic Regression requires <strong>feature scaling</strong> and is sensitive to <strong>class imbalance</strong>, making it commonly used as a <strong>baseline model</strong> for comparison.</p>
+<p>The model was trained and evaluated using the <strong>Framingham Heart Disease dataset</strong>, which contains patient demographic details, clinical measurements, and lifestyle factors to predict the <strong>10-year risk of coronary heart disease (TenYearCHD)</strong>.</p>
+<h3 id="process-followed-1">Process followed:</h3>
+<ul>
+<li>Loaded the dataset and explored its structure, data types, and missing values.</li>
+<li>Handled missing categorical values (<em>education</em>, <em>BPMeds</em>) using <strong>mode imputation</strong>.Handled missing numerical values (<em>cigsPerDay</em>, <em>totChol</em>, BMI_, <em>heartRate</em>, <em>glucose</em>) using <strong>mean imputation</strong>.</li>
+<li>Verified that the dataset contained <strong>no duplicate records</strong>.</li>
+<li>Separated the dataset into <strong>features (X)</strong> and <strong>target labels (y)</strong>.Split the data into training and test sets using <strong>stratified sampling</strong> to preserve class balance.</li>
+<li>Normalized feature values using <strong>standardization</strong> to ensure stable and faster convergence.</li>
+<li>Implemented <strong>Logistic Regression from scratch</strong> using gradient descent and sigmoid activation.</li>
+<li>Trained a <strong>Logistic Regression model using scikit-learn</strong> for comparison</li>
+<li>Evaluated both models using <strong>accuracy, precision, recall, and F1-score</strong>.Measured and compared the <strong>training time</strong> of both implementations.</li>
+<li>Visualized and compared the <strong>decision boundaries</strong> of both models using PCA for 2D representation.</li>
+</ul>
+<h2 id="task-9--evaluation-metrics---pick-the-best-performer">TASK 9 : Evaluation Metrics - Pick the Best Performer!</h2>
+<p><strong>Pickle files</strong> are commonly used in machine learning to save trained models so they can be reused later without training them again.<br>
+<strong>Joblib</strong> is a Python library designed for efficiently loading and saving such models, and it was used here to load all the pretrained <code>.pkl</code> files provided for evaluation.</p>
+<p>For this task, the <strong>Iris dataset</strong> was chosen as it is a simple, balanced multiclass classification dataset suitable for comparing different models.</p>
+<h3 id="process-followed-2"><strong>Process Followed</strong>:</h3>
+<ol>
+<li>
+<p>Loaded the Iris dataset and separated it into features and target labels.</p>
+</li>
+<li>
+<p>Verified the input shape to ensure it matched what the pretrained models expect.</p>
+</li>
+<li>
+<p>Loaded all five pretrained models using joblib.</p>
+</li>
+<li>
+<p>Checked the class labels of each model to confirm label compatibility.</p>
+</li>
+<li>
+<p>Generated predictions for each model on the dataset.</p>
+</li>
+<li>
+<p>Evaluated performance using accuracy, precision, recall, and F1-score (macro-averaged).</p>
+</li>
+<li>
+<p>Compared all models by summarizing the results in a single comparison table.</p>
+</li>
+</ol>
+<h3 id="model-comparison-and-conclusion"><strong>Model Comparison and Conclusion</strong></h3>
+<p>Decision Tree showed slightly lower performance due to rigid splits and minor confusion between overlapping classes. KNN performed well but was sensitive to local neighborhood variations. Random Forest provided stable results through ensemble learning but did not outperform the top models. Logistic Regression and SVM achieved the highest and identical performance metrics.</p>
+<p>Although Logistic Regression and SVM produced similar results, <strong>SVM was chosen as the best-performing model</strong> due to its <strong>margin maximization principle</strong>, which constructs a more robust decision boundary and offers better generalization when class boundaries overlap.</p>
+
