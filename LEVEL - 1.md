@@ -71,21 +71,9 @@ The steps I followed:</p>
 <p>Standardized categorical columns by fixing common spelling errors and removed duplicate records before saving the cleaned dataset as a new CSV file.</p>
 </li>
 </ul>
-<h2 id="task-4--anomaly-detection1">TASK 4 : Anomaly Detection1</h2>
+<h2 id="task-4--anomaly-detection">TASK 4 : Anomaly Detection</h2>
 <p><strong>Anomaly detection</strong> is the process of identifying data points or patterns that significantly deviate from normal behavior. It is commonly used to uncover rare, unusual, or suspicious activities hidden within large datasets.</p>
-<h3 id="real-world-applications">Real-World Applications</h3>
-<ul>
-<li>
-<p>Cybersecurity: Detecting unauthorized access, insider threats, and data breaches</p>
-</li>
-<li>
-<p>Finance: Identifying fraudulent transactions and abnormal spending behavior</p>
-</li>
-<li>
-<p>Healthcare: Spotting irregular patient vitals or abnormal medical test results</p>
-</li>
-</ul>
-<hr>
+<p><a href="https://github.com/riti2043/Concepts_for_level2/blob/master/Anomaly%20detection.md">What I learnt about Anomaly Detection</a></p>
 <h3 id="dataset-used">Dataset Used</h3>
 <p>The dataset contains user activity logs from an internal system, including login behavior, data usage, file downloads, timestamps, and remote access indicators.</p>
 <hr>
