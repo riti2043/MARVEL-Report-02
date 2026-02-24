@@ -123,9 +123,40 @@ The dataset includes the following columns:</p>
 <li>Visualized and compared the <strong>decision boundaries</strong> of both models using PCA for 2D representation.</li>
 </ul>
 <p><a href="https://github.com/riti2043/MARVEL-Report-02/blob/master/TASK_5.ipynb">Link to notebook</a></p>
-<h2 id="task-7">TASK 7:</h2>
+<h2 id="task-7-fairness-meets-functionality">TASK 7: Fairness Meets Functionality</h2>
+<h3 id="dataset-used--1">Dataset Used :</h3>
+<p>The <strong>Utrecht Fairness Recruitment Dataset</strong> was utilized, containing candidate profiles with features such as gender, age, education level, and years of experience. The target variable indicates the final hiring decision.</p>
+<h3 id="process-followed-3">Process followed:</h3>
+<ul>
+<li>
+<p>The dataset was filtered to focus on specific predictors, including sensitive demographic attributes like Age and Gender alongside objective performance metrics like test results.</p>
+</li>
+<li>
+<p>Continuous age values were transformed into discrete categories (&lt;25, 25-35, &gt;35) to align the data with the categorical requirements of the ID3 algorithm.</p>
+</li>
+<li>
+<p>A custom Decision Tree structure was built from scratch, utilizing a Node class to store values, child branches, and recursive pointers.</p>
+</li>
+<li>
+<p>An Entropy function was developed to measure data impurity and determine the mathematical basis for splits.</p>
+</li>
+<li>
+<p>An optimization function was created to identify the feature that maximized information gain at each node, ensuring the most influential features were prioritized.</p>
+</li>
+<li>
+<p>The tree was constructed using the ID3 algorithm, incorporating base cases for pure nodes and scenarios where features were exhausted.</p>
+</li>
+<li>
+<p>A traversal function was implemented to navigate the generated tree by matching sample features to the specific values of child nodes.</p>
+</li>
+<li>
+<p>The model’s predictions were audited by slicing the results by Gender and Age groups to generate individual performance metrics for each population segment.</p>
+</li>
+</ul>
 <p><a href="https://github.com/riti2043/MARVEL-Report-02/blob/master/TASK_7.ipynb">Link to notebook</a></p>
 <p><img src="https://github.com/riti2043/images-for-articles/blob/main/graphviz%20(2).png?raw=true" alt="graphviz (2).png"></p>
+<p>The metrics reveal a lack of <strong>Demographic Parity</strong>, as hiring decisions are heavily dependent on both age and gender; the model shows a severe bias against the <strong>&gt;35</strong> age group (17% recall) and <strong>females</strong>, who face a much lower F1-score (0.62) compared to males (0.76). <strong>Equal Opportunity</strong> is not achieved because qualified candidates from these demographics are significantly less likely to be “hired” than their younger, male counterparts.<br>
+Hence the tree’s reliance on sensitive attributes as primary splits fails ethically, as it utilizes demographic proxies to create inconsistent and discriminatory hiring criteria across all groups.</p>
 <h2 id="task-8--knn-with-ablation-study">TASK 8 : KNN with Ablation Study</h2>
 <p>In KNN algorithm , the majority class label determines the class label of a new data point among its k nearest neighbors.<br>
 KNN is a proximity-based learning and hence the fundamental concept is - <strong>closeness dictates similarity</strong>.<br>
@@ -138,9 +169,9 @@ This <strong>closeness</strong> is determined by a distance metric, commonly Euc
 <li>Regression : Get the average of their values.</li>
 <li>Classification : Get the label with the majority vote.</li>
 </ul>
-<h3 id="dataset-used--1">Dataset Used :</h3>
-<p>The <strong>Breast Cancer Wisconsin (Diagnostic) Dataset</strong> was used, containing 30 clinical features.The goal is to classify tumors as either <strong>Malignant (1)</strong> or <strong>Benign (0)</strong>.</p>
-<h3 id="process-followed-3">Process followed:</h3>
+<h3 id="dataset-used--2">Dataset Used :</h3>
+<p>The <strong>Breast Cancer Wisconsin (Diagnostic) Dataset</strong> was used, containing 30 clinical features. The goal is to classify tumors as either <strong>Malignant (1)</strong> or <strong>Benign (0)</strong>.</p>
+<h3 id="process-followed-4">Process followed:</h3>
 <ul>
 <li>
 <p>Loaded the dataset, dropped unique identifiers, and encoded the diagnosis target into a binary format (M=1, B=0).</p>
@@ -174,7 +205,7 @@ This <strong>closeness</strong> is determined by a distance metric, commonly Euc
 <strong>Joblib</strong> is a Python library designed for efficiently loading and saving such models, and it was used here to load all the pretrained <code>.pkl</code> files provided for evaluation.</p>
 <p>For this task, the <strong>Iris dataset</strong> was chosen as it is a simple, balanced multiclass classification dataset suitable for comparing different models.</p>
 <p><a href="https://github.com/riti2043/Concepts_for_level2/blob/master/Evaluation%20metrics.md">What I learnt about Evaluation Metrics</a></p>
-<h3 id="process-followed-4"><strong>Process Followed</strong>:</h3>
+<h3 id="process-followed-5"><strong>Process Followed</strong>:</h3>
 <ol>
 <li>
 <p>Loaded the Iris dataset and separated it into features and target labels.</p>
