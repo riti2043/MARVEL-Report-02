@@ -50,8 +50,8 @@ The dataset includes the following columns:</p>
 <p><img src="https://github.com/riti2043/Level1images/blob/main/TASK2.jpeg?raw=true" alt=""></p>
 <h2 id="task-3--data-detox---data-cleaning-using-pandas">TASK 3 : Data Detox - Data Cleaning using Pandas</h2>
 <p>Data cleaning is a crucial preprocessing step that ensures datasets are accurate, consistent, and suitable for analysis or machine learning. Proper handling of missing values, inconsistencies, and duplicates improves data quality and model reliability.</p>
-<p>The given dataset contained customer details and activity-related information.<br>
-The steps I followed:</p>
+<p>The given dataset contained customer details and activity-related information.</p>
+<h3 id="process-followed">Process followed:</h3>
 <ul>
 <li>
 <p>Loaded the dataset and explored its structure, data types, and overall size.</p>
@@ -79,7 +79,7 @@ The steps I followed:</p>
 <h3 id="dataset-used">Dataset Used</h3>
 <p>The dataset contains user activity logs from an internal system, including login behavior, data usage, file downloads, timestamps, and remote access indicators.</p>
 <hr>
-<h3 id="process-followed">Process Followed</h3>
+<h3 id="process-followed-1">Process Followed</h3>
 <ul>
 <li>
 <p>Loaded and explored the dataset to understand structure, ranges, and user behavior</p>
@@ -108,8 +108,9 @@ The steps I followed:</p>
 <p>Logistic Regression is a supervised machine learning algorithm used for <strong>binary classification</strong> problems. It models the probability of a data point belonging to a particular class using the <strong>sigmoid function</strong>, which maps values between 0 and 1. Based on a decision threshold, the model assigns class labels such as 0 or 1.</p>
 <p>Logistic Regression is used for <strong>binary classification</strong> when both <strong>probability estimation</strong> and <strong>model interpretability</strong> are important and performs well when the relationship between features and the target is approximately linear.</p>
 <p>Logistic Regression requires <strong>feature scaling</strong> and is sensitive to <strong>class imbalance</strong>, making it commonly used as a <strong>baseline model</strong> for comparison.</p>
+<h3 id="dataset-used-">Dataset used :</h3>
 <p>The model was trained and evaluated using the <strong>Framingham Heart Disease dataset</strong>, which contains patient demographic details, clinical measurements, and lifestyle factors to predict the <strong>10-year risk of coronary heart disease (TenYearCHD)</strong>.</p>
-<h3 id="process-followed-1">Process followed:</h3>
+<h3 id="process-followed-2">Process followed:</h3>
 <ul>
 <li>Loaded the dataset and explored its structure, data types, and missing values.</li>
 <li>Handled missing categorical values (<em>education</em>, <em>BPMeds</em>) using <strong>mode imputation</strong>.Handled missing numerical values (<em>cigsPerDay</em>, <em>totChol</em>, BMI_, <em>heartRate</em>, <em>glucose</em>) using <strong>mean imputation</strong>.</li>
@@ -125,7 +126,47 @@ The steps I followed:</p>
 <h2 id="task-7">TASK 7:</h2>
 <p><a href="https://github.com/riti2043/MARVEL-Report-02/blob/master/TASK_7.ipynb">Link to notebook</a></p>
 <p><img src="https://github.com/riti2043/images-for-articles/blob/main/graphviz%20(2).png?raw=true" alt="graphviz (2).png"></p>
-<h2 id="task-8">TASK 8</h2>
+<h2 id="task-8--knn-with-ablation-study">TASK 8 : KNN with Ablation Study</h2>
+<p>In KNN algorithm , the majority class label determines the class label of a new data point among its k nearest neighbors.<br>
+KNN is a proximity-based learning and hence the fundamental concept is - <strong>closeness dictates similarity</strong>.<br>
+This <strong>closeness</strong> is determined by a distance metric, commonly Euclidean or Manhattan distance.<br>
+<img src="https://github.com/riti2043/images-for-articles/blob/main/Task_82.jpeg?raw=true" alt="euclid_dis"></p>
+<h3 id="how-knn-works">How KNN works</h3>
+<ul>
+<li>Given a new data point, calculate its distance from all other data points in the dataset.</li>
+<li>Get the closest K points.</li>
+<li>Regression : Get the average of their values.</li>
+<li>Classification : Get the label with the majority vote.</li>
+</ul>
+<h3 id="dataset-used--1">Dataset Used :</h3>
+<p>The <strong>Breast Cancer Wisconsin (Diagnostic) Dataset</strong> was used, containing 30 clinical features.The goal is to classify tumors as either <strong>Malignant (1)</strong> or <strong>Benign (0)</strong>.</p>
+<h3 id="process-followed-3">Process followed:</h3>
+<ul>
+<li>
+<p>Loaded the dataset, dropped unique identifiers, and encoded the diagnosis target into a binary format (M=1, B=0).</p>
+</li>
+<li>
+<p>Applied <strong>StandardScaler</strong> to normalize the 30 features, ensuring that larger-scale measurements (like area) did not overshadow smaller-scale metrics (like smoothness).</p>
+</li>
+<li>
+<p>Established a performance benchmark using all 30 features, achieving a baseline accuracy of <strong>94.74%</strong> with an F1-score of <strong>0.9302</strong>.</p>
+</li>
+<li>
+<p>Removed one feature at a time and retrained the model over 30 iterations to measure the resulting impact on Accuracy, Precision, Recall, and F1-score.</p>
+</li>
+<li>
+<p>Analyzed the “Accuracy Drop” for each iteration, discovering that removing certain features actually <strong>improved</strong> model performance (negative accuracy drop).</p>
+</li>
+<li>
+<p>Identified and removed the top 10 “noisy” features , reducing the feature set to the 20 most informative variables.</p>
+</li>
+<li>
+<p>Retrained the optimized model, resulting in a performance lift from <strong>94.74% to 97.37%</strong> accuracy.</p>
+</li>
+<li>
+<p>Implemented the <strong>KNN algorithm from scratch</strong>  to verify the underlying logic.</p>
+</li>
+</ul>
 <p><a href="https://github.com/riti2043/MARVEL-Report-02/blob/master/TASK_8.ipynb">Link to notebook</a></p>
 <p><img src="https://github.com/riti2043/images-for-articles/blob/main/TASK_8.jpeg?raw=true" alt="METRICS"></p>
 <h2 id="task-9--evaluation-metrics---pick-the-best-performer">TASK 9 : Evaluation Metrics - Pick the Best Performer!</h2>
@@ -133,7 +174,7 @@ The steps I followed:</p>
 <strong>Joblib</strong> is a Python library designed for efficiently loading and saving such models, and it was used here to load all the pretrained <code>.pkl</code> files provided for evaluation.</p>
 <p>For this task, the <strong>Iris dataset</strong> was chosen as it is a simple, balanced multiclass classification dataset suitable for comparing different models.</p>
 <p><a href="https://github.com/riti2043/Concepts_for_level2/blob/master/Evaluation%20metrics.md">What I learnt about Evaluation Metrics</a></p>
-<h3 id="process-followed-2"><strong>Process Followed</strong>:</h3>
+<h3 id="process-followed-4"><strong>Process Followed</strong>:</h3>
 <ol>
 <li>
 <p>Loaded the Iris dataset and separated it into features and target labels.</p>
