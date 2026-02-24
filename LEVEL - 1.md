@@ -46,6 +46,7 @@ The dataset includes the following columns:</p>
 <p><strong>Email</strong> – Synthetic email address</p>
 </li>
 </ul>
+<p><a href="https://github.com/riti2043/MARVEL-Report-02/blob/master/TASK_2.ipynb">Link to notebook</a></p>
 <p><img src="https://github.com/riti2043/Level1images/blob/main/TASK2.jpeg?raw=true" alt=""></p>
 <h2 id="task-3--data-detox---data-cleaning-using-pandas">TASK 3 : Data Detox - Data Cleaning using Pandas</h2>
 <p>Data cleaning is a crucial preprocessing step that ensures datasets are accurate, consistent, and suitable for analysis or machine learning. Proper handling of missing values, inconsistencies, and duplicates improves data quality and model reliability.</p>
@@ -71,6 +72,7 @@ The steps I followed:</p>
 <p>Standardized categorical columns by fixing common spelling errors and removed duplicate records before saving the cleaned dataset as a new CSV file.</p>
 </li>
 </ul>
+<p><a href="https://github.com/riti2043/MARVEL-Report-02/blob/master/TASK_3.ipynb">Link to notebook</a></p>
 <h2 id="task-4--anomaly-detection">TASK 4 : Anomaly Detection</h2>
 <p><strong>Anomaly detection</strong> is the process of identifying data points or patterns that significantly deviate from normal behavior. It is commonly used to uncover rare, unusual, or suspicious activities hidden within large datasets.</p>
 <p><a href="https://github.com/riti2043/Concepts_for_level2/blob/master/Anomaly%20detection.md">What I learnt about Anomaly Detection</a></p>
@@ -101,6 +103,7 @@ The steps I followed:</p>
 <p>Identified top suspicious user sessions using multi-feature and multi-model evidence</p>
 </li>
 </ul>
+<p><a href="https://github.com/riti2043/MARVEL-Report-02/blob/master/TASK_4.ipynb">Link to notebook</a></p>
 <h2 id="task-5--logistic-regression-from-scratch">TASK 5 : Logistic Regression from Scratch</h2>
 <p>Logistic Regression is a supervised machine learning algorithm used for <strong>binary classification</strong> problems. It models the probability of a data point belonging to a particular class using the <strong>sigmoid function</strong>, which maps values between 0 and 1. Based on a decision threshold, the model assigns class labels such as 0 or 1.</p>
 <p>Logistic Regression is used for <strong>binary classification</strong> when both <strong>probability estimation</strong> and <strong>model interpretability</strong> are important and performs well when the relationship between features and the target is approximately linear.</p>
@@ -118,6 +121,13 @@ The steps I followed:</p>
 <li>Evaluated both models using <strong>accuracy, precision, recall, and F1-score</strong>.Measured and compared the <strong>training time</strong> of both implementations.</li>
 <li>Visualized and compared the <strong>decision boundaries</strong> of both models using PCA for 2D representation.</li>
 </ul>
+<p><a href="https://github.com/riti2043/MARVEL-Report-02/blob/master/TASK_5.ipynb">Link to notebook</a></p>
+<h2 id="task-7">TASK 7:</h2>
+<p><a href="https://github.com/riti2043/MARVEL-Report-02/blob/master/TASK_7.ipynb">Link to notebook</a></p>
+<p><img src="https://github.com/riti2043/images-for-articles/blob/main/graphviz%20(2).png?raw=true" alt="graphviz (2).png"></p>
+<h2 id="task-8">TASK 8</h2>
+<p><a href="https://github.com/riti2043/MARVEL-Report-02/blob/master/TASK_8.ipynb">Link to notebook</a></p>
+<p><img src="https://github.com/riti2043/images-for-articles/blob/main/TASK_8.jpeg?raw=true" alt="METRICS"></p>
 <h2 id="task-9--evaluation-metrics---pick-the-best-performer">TASK 9 : Evaluation Metrics - Pick the Best Performer!</h2>
 <p><strong>Pickle files</strong> are commonly used in machine learning to save trained models so they can be reused later without training them again.<br>
 <strong>Joblib</strong> is a Python library designed for efficiently loading and saving such models, and it was used here to load all the pretrained <code>.pkl</code> files provided for evaluation.</p>
@@ -147,7 +157,9 @@ The steps I followed:</p>
 <p>Compared all models by summarizing the results in a single comparison table.</p>
 </li>
 </ol>
+<p><a href="https://github.com/riti2043/MARVEL-Report-02/blob/master/TASK_9.ipynb">Link to notebook</a></p>
 <h3 id="model-comparison-and-conclusion"><strong>Model Comparison and Conclusion</strong></h3>
 <p>Decision Tree showed slightly lower performance due to rigid splits and minor confusion between overlapping classes. KNN performed well but was sensitive to local neighborhood variations. Random Forest provided stable results through ensemble learning but did not outperform the top models. Logistic Regression and SVM achieved the highest and identical performance metrics.</p>
 <p>Although Logistic Regression and SVM produced similar results, <strong>SVM was chosen as the best-performing model</strong> due to its <strong>margin maximization principle</strong>, which constructs a more robust decision boundary and offers better generalization when class boundaries overlap.</p>
+<p><img src="https://github.com/riti2043/images-for-articles/blob/main/Task9.jpeg?raw=true" alt="models"></p>
 
