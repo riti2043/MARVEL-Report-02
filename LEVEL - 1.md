@@ -104,6 +104,7 @@ The dataset includes the following columns:</p>
 </li>
 </ul>
 <p><a href="https://github.com/riti2043/MARVEL-Report-02/blob/master/TASK_4.ipynb">Link to notebook</a></p>
+<p><img src="https://github.com/riti2043/images-for-articles/blob/main/TASK_4.jpeg?raw=true" alt=""></p>
 <h2 id="task-5--logistic-regression-from-scratch">TASK 5 : Logistic Regression from Scratch</h2>
 <p>Logistic Regression is a supervised machine learning algorithm used for <strong>binary classification</strong> problems. It models the probability of a data point belonging to a particular class using the <strong>sigmoid function</strong>, which maps values between 0 and 1. Based on a decision threshold, the model assigns class labels such as 0 or 1.</p>
 <p>Logistic Regression is used for <strong>binary classification</strong> when both <strong>probability estimation</strong> and <strong>model interpretability</strong> are important and performs well when the relationship between features and the target is approximately linear.</p>
