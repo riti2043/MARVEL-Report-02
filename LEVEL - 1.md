@@ -109,6 +109,7 @@ The dataset includes the following columns:</p>
 <p>Logistic Regression is a supervised machine learning algorithm used for <strong>binary classification</strong> problems. It models the probability of a data point belonging to a particular class using the <strong>sigmoid function</strong>, which maps values between 0 and 1. Based on a decision threshold, the model assigns class labels such as 0 or 1.</p>
 <p>Logistic Regression is used for <strong>binary classification</strong> when both <strong>probability estimation</strong> and <strong>model interpretability</strong> are important and performs well when the relationship between features and the target is approximately linear.</p>
 <p>Logistic Regression requires <strong>feature scaling</strong> and is sensitive to <strong>class imbalance</strong>, making it commonly used as a <strong>baseline model</strong> for comparison.</p>
+<p><img src="https://github.com/riti2043/images-for-articles/blob/main/TASK_5.jpeg?raw=true" alt=""></p>
 <h3 id="dataset-used-">Dataset used :</h3>
 <p>The model was trained and evaluated using the <strong>Framingham Heart Disease dataset</strong>, which contains patient demographic details, clinical measurements, and lifestyle factors to predict the <strong>10-year risk of coronary heart disease (TenYearCHD)</strong>.</p>
 <h3 id="process-followed-2">Process followed:</h3>
@@ -124,10 +125,41 @@ The dataset includes the following columns:</p>
 <li>Visualized and compared the <strong>decision boundaries</strong> of both models using PCA for 2D representation.</li>
 </ul>
 <p><a href="https://github.com/riti2043/MARVEL-Report-02/blob/master/TASK_5.ipynb">Link to notebook</a></p>
+<h2 id="task-6--battle-test-your-model---support-vector-machines">TASK 6 : Battle-Test Your Model - Support Vector Machines</h2>
+<h3 id="dataset-used-1">Dataset used:</h3>
+<p>A multivariate collection of chemical wine profiles. The data was processed into a binary classification format to distinguish high-quality “Good” wines from standard “Not Good” bottles.</p>
+<h3 id="process-followed-3">Process followed:</h3>
+<ul>
+<li>
+<p>Cleaned the dataset by handling missing values and duplicates, and performed a binary transformation on the quality labels to create target classes.</p>
+</li>
+<li>
+<p>Applied <code>StandardScaler</code> to the chemical features, ensuring all variables contributed equally to the SVM’s distance-based calculations.</p>
+</li>
+<li>
+<p>Developed a Support Vector Machine (SVM) classifier using an RBF kernel and established a baseline performance using the clean dataset.</p>
+</li>
+<li>
+<p>Validated the baseline model using a confusion matrix, identifying a high Recall strategy (<strong>86.5%</strong>) with a specific breakdown of 180 TN, 55 FP, 5 FN, and 32 TP.</p>
+</li>
+<li>
+<p>Conducted a controlled experiment by adding random noise to the feature set, gradually increasing the standard deviation (<span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi></mrow><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal" style="margin-right: 0.03588em;">σ</span></span></span></span></span>) from <strong>0.01</strong> to <strong>0.50</strong>.</p>
+</li>
+<li>
+<p>Retrained the model at each noise increment and systematically logged changes in <strong>Accuracy</strong>, <strong>Precision</strong>, <strong>Recall</strong>, and <strong>Macro F1-Score</strong>.</p>
+</li>
+<li>
+<p>Identified <strong><span class="katex--inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mn>0.02</mn></mrow><annotation encoding="application/x-tex">\sigma = 0.02</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height: 0.43056em; vertical-align: 0em;"></span><span class="mord mathnormal" style="margin-right: 0.03588em;">σ</span><span class="mspace" style="margin-right: 0.277778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right: 0.277778em;"></span></span><span class="base"><span class="strut" style="height: 0.64444em; vertical-align: 0em;"></span><span class="mord">0.02</span></span></span></span></span></strong> as the critical threshold where the model’s discriminative power collapsed, marked by a sharp drop in Recall and F1-score.</p>
+</li>
+<li>
+<p>Concluded that beyond the breakdown point, the noise-to-signal ratio became too high, causing the SVM to lose sensitivity and default to majority-class predictions.</p>
+</li>
+</ul>
+<p><img src="https://github.com/riti2043/images-for-articles/blob/main/TASK_6.jpeg?raw=true" alt=""></p>
 <h2 id="task-7-fairness-meets-functionality">TASK 7: Fairness Meets Functionality</h2>
 <h3 id="dataset-used--1">Dataset Used :</h3>
 <p>The <strong>Utrecht Fairness Recruitment Dataset</strong> was utilized, containing candidate profiles with features such as gender, age, education level, and years of experience. The target variable indicates the final hiring decision.</p>
-<h3 id="process-followed-3">Process followed:</h3>
+<h3 id="process-followed-4">Process followed:</h3>
 <ul>
 <li>
 <p>The dataset was filtered to focus on specific predictors, including sensitive demographic attributes like Age and Gender alongside objective performance metrics like test results.</p>
@@ -172,7 +204,7 @@ This <strong>closeness</strong> is determined by a distance metric, commonly Euc
 </ul>
 <h3 id="dataset-used--2">Dataset Used :</h3>
 <p>The <strong>Breast Cancer Wisconsin (Diagnostic) Dataset</strong> was used, containing 30 clinical features. The goal is to classify tumors as either <strong>Malignant (1)</strong> or <strong>Benign (0)</strong>.</p>
-<h3 id="process-followed-4">Process followed:</h3>
+<h3 id="process-followed-5">Process followed:</h3>
 <ul>
 <li>
 <p>Loaded the dataset, dropped unique identifiers, and encoded the diagnosis target into a binary format (M=1, B=0).</p>
@@ -206,7 +238,7 @@ This <strong>closeness</strong> is determined by a distance metric, commonly Euc
 <strong>Joblib</strong> is a Python library designed for efficiently loading and saving such models, and it was used here to load all the pretrained <code>.pkl</code> files provided for evaluation.</p>
 <p>For this task, the <strong>Iris dataset</strong> was chosen as it is a simple, balanced multiclass classification dataset suitable for comparing different models.</p>
 <p><a href="https://github.com/riti2043/Concepts_for_level2/blob/master/Evaluation%20metrics.md">What I learnt about Evaluation Metrics</a></p>
-<h3 id="process-followed-5"><strong>Process Followed</strong>:</h3>
+<h3 id="process-followed-6"><strong>Process Followed</strong>:</h3>
 <ol>
 <li>
 <p>Loaded the Iris dataset and separated it into features and target labels.</p>
